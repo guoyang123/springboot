@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+h1{
+	text-align:center;
+}
+table{
+	border:1px solid white;
+	margin:0px auto;
+}
+
+td:last-child a{
+	text-decoration:none;
+	color:#993300;
+}
+td:last-child a:hover{
+	
+	color:#CC0000;
+}
+/**
+ 
+*/
+
+ #login{
+   background-color:#CC9966;
+   color:white;
+   margin:0px auto;
+   display:block;
+   width:100%;
+   height:44px;
+ }
+
+#login:active{
+	 color:gray;
+	
+}
+

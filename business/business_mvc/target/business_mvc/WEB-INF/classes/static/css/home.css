@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+header div:first-child{
+	width:100%;
+	height:40px;
+	background-color:black;
+	position:relative;
+	
+}
+header div:first-child ul{
+	  position:absolute; 
+	top:5px;
+	left:100%;
+	transform:translateX(-110%);
+	list-style:none;
+	display:flex;
+	width:30%;
+	height:30px;
+    flex-direction:row;
+ 
+}
+header div:first-child ul li{
+	flex-grow:1;
+	color:white;
+	line-height:30px;
+	border-right:1px solid white;
+}
+header div:first-child ul li:first-child{
+	
+	border-right:none;
+}
+header div:first-child ul li:last-child{
+	
+	border-right:none;
+}
+header div:first-child ul li a{
+	
+	color:gray;
+	text-decoration:none;
+	display:block;
+	text-align:center;
+}
+header div:first-child ul li a:hover{
+	
+	color:white;
+	
+}
+/**搜索栏*/
+ header div:first-child+div{
+ width:100%;
+ height:160px;
+ background-color:white;
+ position:relative;
+} 
+
+
+#search_container{
+	
+	display:flex;
+	width:30%;
+	height:30px;
+	margin-top:20px;
+	position:absolute;
+	left:60%;
+	justify-content:flex-end;
+}
+#search_div{
+	background-color:white;
+	flex-grow:4;
+}
+#car_container{
+	
+	flex-grow:1;
+	height:40px;
+	line-height:40px;
+}
+
+#search_div input[type=search]{
+	border:none;
+	border-bottom:1px solid #996633;
+	height:30px;
+	line-height:30px;
+	
+}
+
+
+#searchpic{
+	width:20px;
+	height:20px;
+	position:relative;
+	top:10px;
+	left:-10px;
+	
+}
+#car_container img{
+	
+	width:20px;
+	height:20px;
+}
+
+header nav ul{
+	width:90%;
+	height:40px;
+	margin:0px auto;
+	list-style:none;
+	display:flex;
+	
+	margin-top:90px;
+}
+
+header nav ul li{
+	flex-grow:1;
+	text-align:center;
+	line-height:40px;
+}
+
+header nav ul li a{
+	display:block;
+	text-decoration:none;
+	color:black;
+	height:40px;
+	
+	
+}
+
+
+header nav ul li:first-child a{
+	color:#CC9966;
+}
+header nav ul li:first-child a b{
+	border-bottom:2px solid #CC9966;
+}
+header nav ul li a:hover{
+	
+	color:#CC9966;
+	
+	
+}
+header nav ul li a:hover b{
+	
+	
+	border-bottom:2px solid #CC9966;
+	
+}
+
+article table{
+	margin:0px auto;
+}
+
+article table td{
+	text-align:center;
+}
+
+article table td a{
+	text-decoration:none;
+	color:#CC9966
+}

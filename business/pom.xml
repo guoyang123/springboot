@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.neusoft</groupId>
+  <artifactId>business</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>business</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+   <dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- 加载spring-boot依赖 -->
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-dependencies</artifactId>
+	    <version>1.5.9.RELEASE</version>
+	    <type>pom</type>
+	    <scope>import</scope>
+	</dependency>
+	
+
+	
+  </dependencies>
+  </dependencyManagement>
+  <modules>
+  	<module>business_mvc</module>
+  	<module>business_dao</module>
+  	<module>business_entity</module>
+    <module>business_service</module>
+  </modules>
+  
+  <build>
+   <pluginManagement>
+    <plugins>
+      <plugin>  
+	    <groupId>org.apache.maven.plugins</groupId>  
+	    <artifactId>maven-compiler-plugin</artifactId>  
+	    <version>3.6.0</version>  
+	    <configuration>  
+	        <source>1.8</source> <!-- 源代码使用的开发版本 -->  
+	        <target>1.8</target> <!-- 需要生成的目标class文件的编译版本 -->  
+	        <!-- 一般而言，target与source是保持一致的，但是，有时候为了让程序能在其他版本的jdk中运行(对于低版本目标jdk，源代码中需要没有使用低版本jdk中不支持的语法)，会存在target不同于source的情况 -->  
+	       <encoding>UTF-8</encoding>   
+	    </configuration>  
+    </plugin>   
+    </plugins>
+   </pluginManagement>
+  
+  </build>
+</project>

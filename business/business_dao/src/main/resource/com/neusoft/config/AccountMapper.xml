@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+
+<mapper namespace="com.neusoft.dao.AccountMapper">
+
+  
+   <!-- 注册 -->
+   <insert id="addAccount"  parameterType="com.neusoft.entity.Account" 
+        useGeneratedKeys="true" keyProperty="accountid">
+         insert into account(accountid,username,password) values(#{accountid},#{username},#{password});
+        </insert>
+  
+  
+    <select id="findAccount" parameterType="com.neusoft.entity.Account" resultType="com.neusoft.entity.Account">
+       select  *  from account where username=#{username} and password=#{password}
+    </select>
+   
+  
+
+</mapper>
